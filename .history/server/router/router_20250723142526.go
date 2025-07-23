@@ -8,10 +8,11 @@ import (
 
 func SetupRouter() *gin.Engine {
     r := gin.Default()
+
+    // Apply middleware
     r.Use(middleware.CORSMiddleware())
 
-    r.POST("/api/google-login", handlers.GoogleLoginHandler)
-    // Existing user routes
+    // Routes
     userRoutes := r.Group("/users")
     {
         userRoutes.GET("/", handlers.GetUsers)

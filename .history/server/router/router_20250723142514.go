@@ -18,5 +18,8 @@ func SetupRouter() *gin.Engine {
         userRoutes.POST("/", handlers.CreateUser)
     }
 
+    // New login route
+    r.POST("/api/google-login", handlers.GoogleLoginHandler)
+
     return r
 }

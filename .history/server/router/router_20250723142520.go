@@ -18,5 +18,6 @@ func SetupRouter() *gin.Engine {
         userRoutes.POST("/", handlers.CreateUser)
     }
 
+
     return r
 }

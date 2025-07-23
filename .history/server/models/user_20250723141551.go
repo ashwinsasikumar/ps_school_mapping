@@ -1,6 +1,16 @@
 package models
 
-type Useru struct {
+
+type User struct {
+    ID      int            `json:"id"`
+    UserID  string         `json:"user_id"`
+    Name    string         `json:"name"`
+    Role    string         `json:"role"`
+    MailID  string         `json:"mail_id"`
+    PhNo    sql.NullString `json:"phone"`
+}
+
+type User struct {
     ID    int    `json:"id"`
     Name  string `json:"name"`
     Email string `json:"email"`
