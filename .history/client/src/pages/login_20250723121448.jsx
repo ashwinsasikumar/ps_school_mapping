@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Mentorimg from "../../assets/LoginPage/Mentor.png";
 
@@ -43,10 +43,12 @@ const LoginPage = ({ setUser }) => {
         const role = data.user.Role.toLowerCase();
 
         // Navigate based on role
-        if (role === "Admin") {
+        if (role === "admin") {
           navigate("/Admin");
-        } else if (role === "Faculty") {
+        } else if (role === "faculty") {
           navigate("/Faculty");
+        } else {
+          navigate("/Dashboard");
         }
       } else {
         alert(data.message || "Google sign-in failed");

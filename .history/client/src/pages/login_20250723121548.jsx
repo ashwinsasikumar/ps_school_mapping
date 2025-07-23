@@ -45,8 +45,10 @@ const LoginPage = ({ setUser }) => {
         // Navigate based on role
         if (role === "Admin") {
           navigate("/Admin");
-        } else if (role === "Faculty") {
+        } else if (role === "faculty") {
           navigate("/Faculty");
+        } else {
+          navigate("/Dashboard");
         }
       } else {
         alert(data.message || "Google sign-in failed");
