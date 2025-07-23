@@ -1,0 +1,13 @@
+# .air.toml
+
+root = "."
+
+tmp_dir = "tmp" # Optional
+
+[build]
+bin = "main.exe" # ✅ must be .exe on Windows
+cmd = "go build -o main.exe main.go" # ✅ no {{}} templates
+
+include = ["."]
+exclude = ["tmp/*", "client/*"]
+ignore = ["tmp/**"]
